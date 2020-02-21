@@ -1,0 +1,51 @@
+header {
+  visibility: hidden;
+  /*N'est visible que si on appelle dans la propriété visibility: visible; */
+  color: red;
+  font-size: 1.5em;
+}
+footer {
+  visibility: hidden;
+  /*N'est visible que si on appelle dans la propriété visibility: visible; */
+  color: red;
+}
+
+article {
+  text-align: center;
+  display: flex;
+}
+
+
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 320px;
+  font-size: 1.2em;
+}
+
+
+
+/* Changement de mise en page (affichage en colonne sur les ecrans <640px*/
+@media screen and (max-width : 640px) {
+
+  article {
+      display: block;
+  }
+}
+
+
+ /*appariton du header sur les ecrans >800px*/
+@media screen and (min-width : 800px) {
+  header {
+      visibility: visible;
+  }
+
+}
+
+
+  /*apparition du footer à l'impression*/
+@media print {
+  footer {
+      visibility: visible;
+  }
+}
